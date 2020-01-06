@@ -1,15 +1,16 @@
 {
-  "name": "empty-project",
+  "name": "AllyMap",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
-  "author": "",
+  "author": "Simon Seebacher, Thomas Steiner",
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "build-prod": "parcel build src/index.html",
+    "lint": "./node_modules/.bin/eslint src/index.js"
   },
   "dependencies": {},
   "devDependencies": {
