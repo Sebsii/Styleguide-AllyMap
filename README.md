@@ -1,6 +1,4 @@
-# empty-project
-
-Empty project.
+# Styleguide for our MMP2a AllyMap
 
 ## Building and running on localhost
 
