@@ -1,6 +1,2 @@
-import "./styles.scss";
+import "./styles/main.scss";
 console.log("hello world!");
-
-let x = "hello";
-
-console.log(x);
