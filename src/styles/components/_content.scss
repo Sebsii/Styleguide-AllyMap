@@ -1,0 +1,78 @@
+.content {
+    margin-top: $heightNavBar; // necessary because of otherwise top of <main> would be under the navbar
+}
+
+.p-flow {
+    margin-left: 3rem;
+}
+
+.color {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: $radius;
+    margin: 2rem;
+    padding: 0.5rem 0;
+
+    @media only screen and (max-width: $widthPhone) {
+        flex-direction: column;
+    }
+    
+    &--green {
+        background-color: #66AD3A;
+    }
+
+    &--yellow {
+        background-color: #D4A429;
+    }
+
+    &--red {
+        background-color: #B92C2C;
+    }
+
+    &--grey {
+        background-color: #888888;
+    }
+
+    &--primary {
+        background-color: $primaryColor;
+        color: #ffffff;
+    }
+
+    &--white {
+        background-color: #ffffff;
+        border: 1px solid black;
+    }
+
+    &--black {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    &__value {
+        @media only screen and (max-width: $widthPhone) {
+            margin: 0.5rem;
+        }
+    }
+}
+
+.font {
+    margin-left: 3rem;
+    border: 1px solid black;
+    border-radius: 30px;
+
+    &__item {
+        margin-left: 2rem;
+
+        &--l {
+            font-size: 24px;
+        }
+        &--m {
+            font-size: 20px;
+        }
+        &--s {
+            font-size: 18px;
+        }
+    }
+}
+

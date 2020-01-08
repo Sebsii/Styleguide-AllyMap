@@ -1,0 +1,45 @@
+.burger {
+	background: none;
+	border: none;
+	padding: 0;
+	width: $heightNavBar;
+	height: $heightNavBar;
+	@include flex-center;
+    flex-direction: column;
+    display: none;
+
+    @media only screen and (max-width: $widthTablet) {
+        display: flex;
+    }
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+	}
+
+	&__bar {
+		width: 25px;
+		height: 2px;
+		background: $primaryColor;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+    }
+    
+	&.open {
+        .burger__bar {
+            &--1 {
+                transform: rotate(-45deg) translate(-5px, 5px);
+            }
+            &--2 {
+                opacity: 0;
+            }
+            &--3 {
+                transform: rotate(45deg) translate(-5px, -5px);
+            }
+        }
+    }
+}

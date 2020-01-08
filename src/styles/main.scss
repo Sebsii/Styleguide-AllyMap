@@ -1,5 +1,8 @@
 @import "variables";
 @import "normalize";
+@import "mixins";
 @import "globals";
-@import "components/navbar";
+@import "components/header";
+@import "components/content";
+@import "components/burger";
 

@@ -9,21 +9,151 @@
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li>Brand Guide</li>
-                    <li>CSS Methodologies</li>
-                    <li>Components</li>
-                    <li>Layouts</li>
-                </ul>
-            </nav>
-        </div>
-        <h1>AllyMap</h1>
+    <header class="navbar">
+        <h1>AllyMap - Styleguide</h1>
+        <button class="burger">
+            <div class="burger__bar burger__bar--1"></div>
+            <div class="burger__bar burger__bar--2"></div>
+            <div class="burger__bar burger__bar--3"></div>
+        </button>
+        <nav class="main-navigation">
+            <ul class="main-navigation__list">
+                <li class="main-navigation__list-item">
+                    <a class="main-navigation__link" href="#brand-guide">Brand Guide</a>
+                </li>
+                <li class="main-navigation__list-item">
+                    <a class="main-navigation__link" href="#css-methodologies">CSS Methodologies</a>
+                </li>
+                <li class="main-navigation__list-item">
+                    <a class="main-navigation__link" href="#components">Components</a>
+                </li>
+                <li class="main-navigation__list-item">
+                    <a class="main-navigation__link" href="#layouts">Layouts</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <main>
-
+    <main class="max-width-container content">
+        <section class="major-section">
+            <h2 id="brand-guide">Brand Guide</h2>
+            <section class="minor-section">
+                <h3>Introduction</h3>
+                <p class="p-flow">
+                    AllyMap is our MultiMediaProject 2A and this is its Styleguide.
+                </p>
+                <p class="p-flow">
+                    The main goal is a Web-App, which provides a map, where you can see the different accessibillity
+                    levels of public places regarding wheelchair usage. The secondary goal is to give users the
+                    possibility to plan routes with these points of interests.
+                </p>
+            </section>
+            <section class="minor-section">
+                <h3>Colors</h3>
+                <p class="p-flow">
+                    Our App mainly consists of a Map and its markers, which show accessibillity levels with a traffic
+                    light system.
+                </p>
+                <h4>Markers</h4>
+                <div class="color color--green">
+                    <p class="color__value">RGB 102 173 58</p>
+                    <p class="color__value">HEX #66AD3A</p class="color__value">
+                    <p class="color__value">CMYK 0.410 0 0.664 0.321</p class="color__value">
+                </div>
+                <div class="color color--yellow">
+                    <p class="color__value">RGB 212 164 41</p class="color__value">
+                    <p class="color__value">HEX #D4A429</p class="color__value">
+                    <p class="color__value">CMYK 0 0.226 0.806 0.168</p class="color__value">
+                </div>
+                <div class="color color--red">
+                    <p class="color__value">RGB 185 44 44</p class="color__value">
+                    <p class="color__value">HEX #B92C2C</p class="color__value">
+                    <p class="color__value">CMYK 0 0.762 0.762 0.274</p class="color__value">
+                </div>
+                <div class="color color--grey">
+                    <p class="color__value">RGB 102 173 58</p>
+                    <p class="color__value">HEX #888888</p class="color__value">
+                    <p class="color__value">CMYK 0 0 0 0.466</p class="color__value">
+                </div>
+                <h4>Other UI Elements</h4>
+                <div class="color color--primary">
+                    <p class="color__value">RGB 0 96 60</p class="color__value">
+                    <p class="color__value">HEX #00603C</p class="color__value">
+                    <p class="color__value">CMYK 1 0 0.375 0.623</p class="color__value">
+                </div>
+                <div class="color color--white">
+                    <p class="color__value">RGB 255 255 255</p>
+                    <p class="color__value">HEX #FFFFFF</p class="color__value">
+                    <p class="color__value">CMYK 0 0 0 0</p>
+                </div>
+                <div class="color color--black">
+                    <p class="color__value">RGB 0 0 0</p>
+                    <p class="color__value">HEX #000000</p class="color__value">
+                    <p class="color__value">CMYK 0 0 0 1</p class="color__value">
+                </div>
+            </section>
+            <section class="minor-section">
+                <h3>Typography</h3>
+                <h4>Poppins</h4>
+                <p class="p-flow">Poppins is our font of choice, because its easy to read and complements the whole style of the Application. Actually because AllyMap is more like an App than a Website, we do not have that many different sizes</p>
+                <div class="font">
+                    <p class="font__item font__item--l">24px Headings, Buttons and important Texts</p>
+                    <p class="font__item font__item--m">20px Filter-buttons and descriptions</p>
+                    <p class="font__item font__item--s">18px Descriptions and text</p>
+                </div>
+            </section>
+            <section class="minor-section">
+                <h3>Logo</h3>
+                <p class="p-flow">Coming soon</p>
+            </section>
+        </section>
+        <section class="major-section">
+            <h2 id="css-methodologies">CSS Methodologies</h2>
+            <section class="minor-section">
+                <h3>Code Style Rules</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Naming Conventions</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Typography</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Logo</h3>
+            </section>
+        </section>
+        <section class="major-section">
+            <h2 id="components">Components</h2>
+            <section class="minor-section">
+                <h3>Headings</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Lists</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Links</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Buttons</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Form Elements</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Navigation</h3>
+            </section>
+        </section>
+        <section class="major-section">
+            <h2 id="layouts">Layouts</h2>
+            <section class="minor-section">
+                <h3>Map</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Route</h3>
+            </section>
+            <section class="minor-section">
+                <h3>Filter</h3>
+            </section>
+        </section>
     </main>
     <footer>
 

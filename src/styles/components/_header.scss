@@ -1,0 +1,49 @@
+.navbar {
+    margin: 0;
+    background-color: $secondaryColor;
+    // height: $heightNavBar;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @include shadow;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.main-navigation {
+
+	&__list {
+		list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $widthTablet) {
+            display: none;
+            flex-direction: column;
+        }
+    }
+    
+    &__list-item {
+        font-size: 1.25rem;
+    }
+    
+    &__link {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: $primaryColor;
+        transition-duration: 0.2s;
+        border-radius: $radius;
+
+        &:hover, &:focus {
+            color: $primaryColorLight;
+        }
+    }
+
+    &.open {
+        .main-navigation__list {
+            display: flex;
+        }
+    }
+}
+
