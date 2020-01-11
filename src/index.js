@@ -1,6 +1,6 @@
 import "./styles/main.scss";
-import './prism';
-
+import Prism from 'prismjs';
+Prism.highlightAll();
 
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector(".main-navigation");
