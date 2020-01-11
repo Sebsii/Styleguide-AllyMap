@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles/prism.css" rel="stylesheet" />
     <title>AllyMap - Styleguide</title>
 </head>
 
@@ -134,7 +135,26 @@
             </section>
             <section class="minor-section">
                 <h3>Buttons</h3>
-                <button class='btn'>Button</button>
+                <div class="buttons">
+                    <pre><code class="language-css">
+                        .buttons{
+                            &__btn{
+                                color: $baseColor;
+                                background-color: $primaryColor;
+                                border: none;
+                                outline: none;
+                                padding: 14px 22px; 
+                                border-radius: 50px;
+                                transition: 0.4s;
+                        
+                                &:hover{
+                                    background-color: $primaryColorLight;
+                                    transition: 0.4s;
+                                }
+                            } 
+                        }
+                </code></pre>
+                </div>
             </section>
             <section class="minor-section">
                 <h3>Form Elements</h3>

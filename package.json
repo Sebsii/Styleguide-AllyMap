@@ -12,7 +12,9 @@
     "build": "parcel build src/index.html",
     "lint": "./node_modules/.bin/eslint src/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "prismjs": "^1.18.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",

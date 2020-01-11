@@ -1,9 +1,11 @@
 import "./styles/main.scss";
+import './prism';
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector(".main-navigation");
     const burger = document.querySelector(".burger");
-
+    hljs.initHighlightingOnLoad();
     function toggleNav() {
         nav.classList.toggle("open");
         burger.classList.toggle("open");
