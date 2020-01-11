@@ -43,3 +43,7 @@ p {
 .max-width-container {
     @include max-width-container
 }
+
+.code{
+    width: 80%;
+}
