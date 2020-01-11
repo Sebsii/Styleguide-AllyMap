@@ -1,5 +1,6 @@
 @import './../variables';
 
+
 .buttons{
     &__btn{
         color: $baseColor;
@@ -16,7 +17,7 @@
             transition: 0.4s;
         }
     } 
-    
+
     &__btn-back{
         color: $baseColor;
         background-color: $primaryColor;
@@ -26,6 +27,7 @@
         cursor: pointer;
         border-radius: 50%;
         transition: 0.4s;
+        
 
         &:hover{
             background-color: $primaryColorLight;
@@ -34,6 +36,6 @@
 
         &__icon{
             height: 30px; 
-        }
+        } 
     }
 }

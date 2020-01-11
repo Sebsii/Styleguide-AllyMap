@@ -151,7 +151,7 @@
                     </code></pre>
 
                     <button class="buttons__btn-back">
-                        <img class="buttons__btn-back__icon svg" src="./icons/arrow.svg" alt="Some awesome company" />
+                        <img class="buttons__btn-back__icon" src="./icons/arrow.svg" alt="Some awesome company" />
                     </button>
                     
                     <pre><code class="lang-scss">
@@ -179,6 +179,22 @@
             </section>
             <section class="minor-section">
                 <h3>Form Elements</h3>
+                <div class="form-elements">
+                    <input class="form-elements__search-field" type="text" placeholder="Search...">
+                </div>
+                <pre><code class="lang-scss">
+                    .search-field{
+                        border: 2px solid $grey;
+                        padding: 10px 20px;
+                        border-radius: 50px;
+                        outline: none;
+                
+                        &:focus{
+                            border: 2px solid $primaryColor;
+                        }
+                    }
+                </code></pre>
+           
             </section>
             <section class="minor-section">
                 <h3>Navigation</h3>
