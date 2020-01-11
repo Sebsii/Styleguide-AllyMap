@@ -130,14 +130,15 @@
             </section>
             <section class="minor-section">
                 <h3>Buttons</h3>
-                <h4>Default button  </h4>
+                <h4>Default button</h4>
                 <p class="p-flow">
                    This Button is for actions like "Add to Route". The general shape is a rectangle with rounded corners. The button is colored in our primary color,
                 with white text and the color changes to the brighter version of the primary color when hovering.
                 </p>
 
                 <div class="buttons">
-                    <button class="buttons__btn" >Button</button>
+                    <button class="buttons__btn p-flow" >Button</button>
+                    <h4>SCSS</h4>
                     <pre><code class="lang-scss">
                         .btn{
                             color: $baseColor;
@@ -159,10 +160,10 @@
                     <p class="p-flow">
                       The back button has the same styling as the default button but the shape is a circle.
                     </p>
-                    <button class="buttons__btn-back">
+                    <button class="buttons__btn-back p-flow">
                         <img class="buttons__btn-back__icon" src="./icons/arrow.svg" alt="Some awesome company" />
                     </button>
-                    
+                    <h4>SCSS</h4>
                     <pre><code class="lang-scss">
                         .btn-back{
                             color: $baseColor;
@@ -194,9 +195,10 @@
                     to highlight the current target.
                   </p>
 
-                <div class="form-elements">
+                <div class="form-elements p-flow">
                     <input class="form-elements__search-field" type="text" placeholder="Search...">
                 </div>
+                <h4>SCSS</h4>
                 <pre><code class="lang-scss">
                     .search-field{
                         border: 2px solid $grey;
