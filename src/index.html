@@ -261,7 +261,52 @@
 
             </section>
             <section class="minor-section">
-                <h3>Navigation</h3>
+                <h3>Marker</h3>
+                <p class="p-flow">
+                   The marker are to pin positions on the map and show what is currently selected. The colors of the markers show the level of accessebility in a traffic light system. The grey one shows, that there are currently no informations about the accessability level.
+                </p>
+                <div class="form-elements p-flow">
+                    <svg class="marker marker--red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/> </svg>
+                    <svg class="marker marker--green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/> </svg>
+                    <svg class="marker marker--yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/> </svg>
+                    <svg class="marker marker--grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/> </svg>
+                    
+                </div>
+                <h5>HTML</h5>
+                <pre><code class="lang-html">   
+&#60;svg class="marker marker--red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"&#62; &#60;path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/ &#62; &#60;svg &#62;
+               
+                 </code></pre>
+                <h5>SCSS</h5>
+                <pre><code class="lang-scss">
+.marker{
+    height: 40px;
+
+
+    &--red{
+        fill: $red;
+    }
+    &--green{
+        fill: $green;
+    }
+    &--yellow{
+        fill: $yellow;
+    }
+    &--grey{
+        fill: $grey;
+    }
+}
+                    
+                    
+            </code></pre>
+            </section>
+
+            <section class="minor-section">
+                <h3>Card</h3>
+            </section>
+
+            <section class="minor-section">
+                <h3>Filter</h3>
             </section>
         </section>
         <section class="major-section">

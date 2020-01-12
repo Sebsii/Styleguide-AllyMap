@@ -1,0 +1,20 @@
+@import './../variables';
+
+.marker{
+    height: 40px;
+
+
+    &--red{
+        fill: $red;
+    }
+    &--green{
+        fill: $green;
+    }
+    &--yellow{
+        fill: $yellow;
+    }
+    &--grey{
+        fill: $grey;
+    }
+}
+
