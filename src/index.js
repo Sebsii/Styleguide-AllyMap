@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     burger.addEventListener("click", toggleNav);
 
-    const links = document.querySelectorAll("header nav a");
+    const links = document.querySelectorAll(".scroll");
     links.forEach(link => link.addEventListener('click', scrollToLink));
 
     function scrollToLink(event) {
