@@ -74,7 +74,7 @@
                     <p class="color__value">HEX #888888</p>
                     <p class="color__value">CMYK 0 0 0 0.466</p>
                 </div>
-                <h4>Other UI Elements</h4>
+                <h4>UI Elements</h4>
                 <div class="color color--primary">
                     <p class="color__value">RGB 0 96 60</p>
                     <p class="color__value">HEX #00603C</p>
@@ -128,17 +128,82 @@
                     <li class="list__item">Use Semicolons</li>
                     <li class="list__item">Each reusable component has its own styling file in the styles folder</li>
                     <li class="list__item">All components have to be imported into one main.scss</li>
-                    <li class="list__item">Use <a class="inline-link" href="https://necolas.github.io/normalize.css/">Normalize.css</a> as a css reset</li>
-                    <li class="list__item">Use <a class="inline-link" href="https://sass-lang.com/">SCSS</a> as a preprocessor</li>
-                    <li class="list__item">Use <a class="inline-link" href="https://github.com/postcss/autoprefixer">PostCSS Autoprefixer</a> as a postprocessor</li>
+                    <li class="list__item">Use <a class="inline-link"
+                            href="https://necolas.github.io/normalize.css/">Normalize.css</a> as a css reset</li>
+                    <li class="list__item">Use <a class="inline-link" href="https://sass-lang.com/">SCSS</a> as a
+                        preprocessor</li>
+                    <li class="list__item">Use <a class="inline-link"
+                            href="https://github.com/postcss/autoprefixer">PostCSS Autoprefixer</a> as a postprocessor
+                    </li>
                     <li class="list__item">Using rem and % for sizing is encouraged</li>
                     <li class="list__item">Use BEM Syntax</li>
-                    <li class="list__item">Use SCSS variables or CSS Custom Properties for things you need more often</li>
+                    <li class="list__item">Use SCSS variables or CSS Custom Properties for things you need more often
+                    </li>
                     <li class="list__item">Use camelCase for variables</li>
                 </ul>
             </section>
             <section class="minor-section">
                 <h3>Naming Conventions</h3>
+                <p class="p-flow">We use BEM. BEM stands for Block
+                    Element Modifier and is a methodology that helps you to create reusable components and code sharing
+                    in front-end development. BEM and SCSS work hand in hand because the styles can be very well
+                    structured like in the example below.</p>
+                <p class="p-flow">A block is a independant element, which can be used anywhere it is needed, without to
+                    change anything. The name of the block should describe what it is e.g. 'navbar' or 'infobox'. If it
+                    consits of more than one word, they are connected with a dash e.g. 'main-navigation'</p>
+                <p class="p-flow">An element is a element, which is dependant on the block, which it is
+                    nested into. The name consists of the block name, which it belongs to and its own name. Those two
+                    halfes are connected by two underscores e.g. list__item or color__value.</p>
+                <p class="p-flow">A modifier is a class, which changes a detail of the element, which it is applied to.
+                    Its name is built by appanding the modification to the block or element name with two dashes e.g.
+                    color--green or font__item--large.</p>
+                <p class="p-flow">For further reading check out its homepage <a class="inline-link"
+                        href="http://getbem.com/">HERE</a>.</p>
+
+                <h4>Example</h4>
+                <pre><code class="lang-scss">
+.block { }
+.block__element { }
+.block--modifier { }
+.block__element--modifier { }
+                </code></pre>
+                <h4>Real Example with use of SCSS</h4>
+                <pre><code class="lang-scss">
+.main-navigation {
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $widthTablet) {
+            display: none;
+            flex-direction: column;
+        }
+    }
+    
+    &__list-item {
+        font-size: 1.25rem;
+    }
+    
+    &__link {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: $primaryColor;
+        transition-duration: 0.2s;
+        border-radius: $radius;
+
+        &:hover, &:focus {
+            color: $primaryColorLight;
+        }
+    }
+
+    &.open {
+        .main-navigation__list {
+            display: flex;
+        }
+    }
+}
+                </code></pre>
             </section>
         </section>
         <section class="major-section">
@@ -187,7 +252,7 @@
     }
 } 
                     </code></pre>
-                    
+
                     <h4>Back button </h4>
                     <p class="p-flow">
                         The back button has the same styling as the default button but the shape is a circle.
@@ -313,14 +378,22 @@
             <h2 id="layouts">Layouts</h2>
             <section class="minor-section">
                 <h3>Map</h3>
+                <p class="p-flow"> This page is used to scroll around and to find interesting places including their
+                    accessibillity levels. Once they are selected they can be added to the route. It also possible to
+                    open the filter menu.
+                </p>
                 <img class="img-layout" src="images/page-map.png" alt="Layout of the page, which shows the map.">
             </section>
             <section class="minor-section">
                 <h3>Route</h3>
+                <p class="p-flow"> Here all locations of the current route are visible. They can be swapped and deleted.
+                </p>
                 <img class="img-layout" src="images/page-route.png" alt="Layout of the page, which shows the map.">
             </section>
             <section class="minor-section">
                 <h3>Filter</h3>
+                <p class="p-flow"> On this page filters can be applied, which reduce the amount of markers visible on
+                    the map.</p>
                 <img class="img-layout" src="images/page-filter.png" alt="Layout of the page, which shows the map.">
             </section>
         </section>

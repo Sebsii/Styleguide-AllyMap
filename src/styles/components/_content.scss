@@ -4,6 +4,10 @@
 
 .p-flow {
     margin-left: 3rem;
+
+    @media only screen and (max-width: $widthPhone) {
+        margin-left: 0;
+    }
 }
 
 .color {
@@ -87,6 +91,8 @@
 }
 
 .img-layout {
+    display: block;
     max-width: 100%;
+    margin: 2rem auto;
 }
 
