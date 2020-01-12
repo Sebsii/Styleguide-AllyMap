@@ -265,7 +265,7 @@
 &#60;button class="buttons__btn-back p-flow"&#62;
     &#60;img class="buttons__btn-back__icon" src="./icons/arrow.svg" alt="" /&#62;
 &#60;button&#62;
-                                        </code></pre>
+                    </code></pre>
                     <h5>SCSS</h5>
                     <pre><code class="lang-scss">
 &__btn-back{
@@ -328,7 +328,9 @@
             <section class="minor-section">
                 <h3>Marker</h3>
                 <p class="p-flow">
-                   The marker are to pin positions on the map and show what is currently selected. The colors of the markers show the level of accessebility in a traffic light system. The grey one shows, that there are currently no informations about the accessability level.
+                   The marker are to pin positions on the map and show what is currently selected.
+                    The colors of the markers show the level of accessebility in a traffic light system.
+                     The grey one shows, that there are currently no informations about the accessability level.
                 </p>
                 <div class="form-elements p-flow">
                     <svg class="marker marker--red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/> </svg>
@@ -340,13 +342,11 @@
                 <h5>HTML</h5>
                 <pre><code class="lang-html">   
 &#60;svg class="marker marker--red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"&#62; &#60;path class="red" d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/ &#62; &#60;svg &#62;
-               
                  </code></pre>
                 <h5>SCSS</h5>
                 <pre><code class="lang-scss">
 .marker{
     height: 40px;
-
 
     &--red{
         fill: $red;
@@ -360,18 +360,114 @@
     &--grey{
         fill: $grey;
     }
-}
-                    
-                    
+} 
             </code></pre>
             </section>
 
             <section class="minor-section">
                 <h3>Card</h3>
+                <p class="p-flow">
+                    The card is to show informations about the current location, like name, address,
+                    accessability level and contains a "Add to route" button.
+                </p>
+            <div class="card-wrapper p-flow">
+                <div class="card">
+                        <div class="card__content">
+                           <p class="card__content__headline">Caffee de Gusto</p>
+                           <p class="card__content__text">Carliste Street, 10048 New York</br> United States of America</p>
+                           <div class="card__content__accessibility">
+                                <div class="card__content__accessibility__circle card__content__accessibility__circle--red"></div>
+                                <p class="card__content__accessibility__level">Partly accessible</p>
+                           </div>
+                           <button class="card__content__btn">Add to route</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5>HTML</h5>
+            <pre><code class="lang-html">   
+&#60;div class="card-wrapper"&#62;
+    &#60;div class="card">
+        &#60;div class="card__content">
+            &#60;p class="card__content__headline">Caffee de Gusto&#60;/p&#62;
+            &#60;p class="card__content__text"&#62;Carliste Street, 10048 New York</br> United States of America&#60/p&#62;
+            &#60;div class="card__content__accessibility"&#62;
+                &#60;div class="card__content__accessibility__circle card__content__accessibility__circle--red"&#62;&#60;div&#62;
+                &#60;p class="card__content__accessibility__level" &#60;Partly accessible&#62;/p&#62;
+            &#60;div&#62;
+            &#60;button class="card__content__btn"&#62;Add to route &#60;/button&#62;
+        &#60;div&#62;
+    &#60;div&#62;
+&#60;div&#62;
+             </code></pre>
+            <h5>SCSS</h5>
+            <pre><code class="lang-scss">
+.card-wrapper{
+    width: 350px;
+    .card{
+        border: 1px solid $primaryColor;
+        border-radius: 20px;
+        padding-bottom: $height/1.5;
+        position: relative;
+        width: 100%;
+
+        &__content{
+            padding: 20px;
+            &__headline{
+                margin:0;  
+                font-size: $font-size-big;
+            }
+
+            &__headline{
+                margin-bottom: 10px;
+            }
+
+            &__text{
+                font-size: $font-size-small;
+                margin:0;
+            }
+
+            &__accessibility{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px 0 0 0;
+            padding: 0;
+                &__circle{
+                    border-radius: 50%;
+                    margin: 0 10px 0 0;
+                    height: 20px;
+                    width: 20px;
+                    &--red{
+                        background-color: $red;
+                    }
+                }
+
+                &__level{
+                    font-size: $font-size-medium;
+                    margin: 0;
+                    color: $darkGrey;
+                }
+            }
+            &__btn{
+                position: absolute;
+                left: 0;
+                bottom: -$height/4;
+                width: 100%;
+            } 
+        }
+    }   
+}
+            </code></pre>
             </section>
+         
 
             <section class="minor-section">
                 <h3>Filter</h3>
+                <p class="p-flow">
+                    Text Filter
+                </p>
             </section>
         </section>
         <section class="major-section">
