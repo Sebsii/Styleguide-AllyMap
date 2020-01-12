@@ -5,7 +5,7 @@
   ],
   "plugins": [
     ["prismjs", {
-        "languages": ["javascript", "scss", "css", "markup"],
+        "languages": ["javascript", "scss", "css", "markup", "html"],
         "plugins": ["line-numbers"],
         "theme": "tomorrow",
         "css": true

@@ -228,24 +228,31 @@
 
                 <div class="buttons">
                     <button class="buttons__btn p-flow">Button</button>
-                    <h4>SCSS</h4>
+                    <h5>HTML</h5>
+                    <pre><code class="lang-html">
+&#60;button class="buttons__btn p-flow"&#62; Button &#60;/button&#62;
+                     </code></pre>
+                    <h5>SCSS</h5>
                     <pre><code class="lang-scss">
-.btn{
+&__btn{
     color: $baseColor;
     background-color: $primaryColor;
     border: none;
     outline: none;
+    cursor: pointer;
     padding: 14px 22px; 
     border-radius: 50px;
     transition: 0.4s;
+    height: $height;
+    font-size: $font-size-big;
 
     &:hover{
-        background-color: $primaryColorLight;
-        transition: 0.4s;
+    background-color: $primaryColorLight;
+    transition: 0.4s;
     }
 } 
                     </code></pre>
-
+                    
                     <h4>Back button </h4>
                     <p class="p-flow">
                         The back button has the same styling as the default button but the shape is a circle.
@@ -253,9 +260,15 @@
                     <button class="buttons__btn-back p-flow">
                         <img class="buttons__btn-back__icon" src="./icons/arrow.svg" alt="Some awesome company" />
                     </button>
-                    <h4>SCSS</h4>
+                    <h5>HTML</h5>
+                    <pre><code class="language-html">
+&#60;button class="buttons__btn-back p-flow"&#62;
+    &#60;img class="buttons__btn-back__icon" src="./icons/arrow.svg" alt="" /&#62;
+&#60;button&#62;
+                                        </code></pre>
+                    <h5>SCSS</h5>
                     <pre><code class="lang-scss">
-.btn-back{
+&__btn-back{
     color: $baseColor;
     background-color: $primaryColor;
     border: none;
@@ -264,6 +277,8 @@
     cursor: pointer;
     border-radius: 50%;
     transition: 0.4s;
+    height: $height;
+    width: $height;
 
     &:hover{
         background-color: $primaryColorLight;
@@ -272,7 +287,7 @@
 
     &__icon{
         height: 30px; 
-    }
+    } 
 }
                     </code></pre>
                 </div>
@@ -285,25 +300,29 @@
                     focus,
                     to highlight the current target.
                 </p>
-
                 <div class="form-elements p-flow">
                     <input class="form-elements__search-field" type="text" placeholder="Search...">
                 </div>
-                <h4>SCSS</h4>
+                <h5>HTML</h5>
+                <pre><code class="lang-html">
+&#60;input class="search-field" type="text" placeholder="Search..."/&#62;
+                 </code></pre>
+                <h5>SCSS</h5>
                 <pre><code class="lang-scss">
-.search-field{
+&__search-field{
     border: 2px solid $grey;
     padding: 10px 20px;
     border-radius: 50px;
     outline: none;
+    max-width: 100%;
+    height: $height;
+    font-size: $font-size-big;
 
     &:focus{
         border: 2px solid $primaryColor;
     }
 }
-                </code></pre>
-
-
+            </code></pre>
 
             </section>
             <section class="minor-section">

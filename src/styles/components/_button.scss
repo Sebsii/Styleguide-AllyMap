@@ -11,6 +11,8 @@
         padding: 14px 22px; 
         border-radius: 50px;
         transition: 0.4s;
+        height: $height;
+        font-size: $font-size-big;
 
         &:hover{
             background-color: $primaryColorLight;
@@ -27,7 +29,8 @@
         cursor: pointer;
         border-radius: 50%;
         transition: 0.4s;
-        
+        height: $height;
+        width: $height;
 
         &:hover{
             background-color: $primaryColorLight;

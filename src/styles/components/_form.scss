@@ -8,6 +8,9 @@
         padding: 10px 20px;
         border-radius: 50px;
         outline: none;
+        max-width: 100%;
+        height: $height;
+        font-size: $font-size-big;
 
         &:focus{
             border: 2px solid $primaryColor;
