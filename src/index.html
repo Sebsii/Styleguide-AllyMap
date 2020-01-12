@@ -434,7 +434,7 @@
                            <p class="card__content__headline">Caffee de Gusto</p>
                            <p class="card__content__text">Carliste Street, 10048 New York</br> United States of America</p>
                            <div class="card__content__accessibility">
-                                <div class="card__content__accessibility__circle card__content__accessibility__circle--red"></div>
+                                <div class="card__content__accessibility__circle card__content__accessibility__circle--yellow"></div>
                                 <p class="card__content__accessibility__level">Partly accessible</p>
                            </div>
                            <button class="card__content__btn">Add to route</button>
@@ -451,7 +451,7 @@
             &#60;p class="card__content__headline">Caffee de Gusto&#60;/p&#62;
             &#60;p class="card__content__text"&#62;Carliste Street, 10048 New York</br> United States of America&#60/p&#62;
             &#60;div class="card__content__accessibility"&#62;
-                &#60;div class="card__content__accessibility__circle card__content__accessibility__circle--red"&#62;&#60;div&#62;
+                &#60;div class="card__content__accessibility__circle card__content__accessibility__circle--yellow"&#62;&#60;div&#62;
                 &#60;p class="card__content__accessibility__level" &#60;Partly accessible&#62;/p&#62;
             &#60;div&#62;
             &#60;button class="card__content__btn"&#62;Add to route &#60;/button&#62;
@@ -500,6 +500,15 @@
                     &--red{
                         background-color: $red;
                     }
+                    &--green{
+                        background-color: $green;
+                    }
+                    &--yellow{
+                        background-color: $yellow;
+                    }
+                    &--grey{
+                        background-color: $grey;
+                    }
                 }
 
                 &__level{
@@ -526,6 +535,64 @@
                 <p class="p-flow">
                     Text Filter
                 </p>
+                <div class="filter">
+                    <div class="filter__content">
+                        <div class="filter__content__icon">
+                            <svg class="filter__content__icon__food" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.415 12.393l1.868-2.289c.425-.544.224-.988-.055-2.165-.205-.871-.044-1.854.572-2.5 1.761-1.844 5.343-5.439 5.343-5.439l.472.37-3.693 4.728.79.617 3.87-4.59.479.373-3.558 4.835.79.618 3.885-4.58.443.347-3.538 4.85.791.617 3.693-4.728.433.338s-2.55 4.36-3.898 6.535c-.479.771-1.425 1.161-2.334 1.167-1.211.007-1.685-.089-2.117.464l-2.281 2.795c2.445 2.962 4.559 5.531 5.573 6.829.771.987.065 2.421-1.198 2.421-.42 0-.853-.171-1.167-.573l-8.36-10.072s-.926.719-1.944 1.518c-3.172-5.184-6.267-11.661-6.267-13.955 0-.128-.034-.924.732-.924.245 0 .493.116.674.344.509.642 5.415 6.513 10.002 12.049m-2.952 3.617l1.953 2.365-4.115 5.055c-.295.378-.736.576-1.182.576-1.198 0-1.991-1.402-1.189-2.428l4.533-5.568z"/></svg>
+                        </div>
+                        <p class="filter__content__text">Food</p>
+                    </div>
+                </div>
+
+                <h5>HTML</h5>
+                <pre><code class="lang-html">   
+&#60;div class="filter">
+    &#60;div class="filter__content">
+        &#60;div class="filter__content__icon">
+            &#60;svg class="filter__content__icon__food" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"&#62;&#60;path d="M11.415 12.393l1.868-2.289c.425-.544.224-.988-.055-2.165-.205-.871-.044-1.854.572-2.5 1.761-1.844 5.343-5.439 5.343-5.439l.472.37-3.693 4.728.79.617 3.87-4.59.479.373-3.558 4.835.79.618 3.885-4.58.443.347-3.538 4.85.791.617 3.693-4.728.433.338s-2.55 4.36-3.898 6.535c-.479.771-1.425 1.161-2.334 1.167-1.211.007-1.685-.089-2.117.464l-2.281 2.795c2.445 2.962 4.559 5.531 5.573 6.829.771.987.065 2.421-1.198 2.421-.42 0-.853-.171-1.167-.573l-8.36-10.072s-.926.719-1.944 1.518c-3.172-5.184-6.267-11.661-6.267-13.955 0-.128-.034-.924.732-.924.245 0 .493.116.674.344.509.642 5.415 6.513 10.002 12.049m-2.952 3.617l1.953 2.365-4.115 5.055c-.295.378-.736.576-1.182.576-1.198 0-1.991-1.402-1.189-2.428l4.533-5.568z"/&#62;&#60;svg&#62;
+        &#60;/div&#62;
+        &#60;p class="filter__content__text"&#62;Food&#60;/p&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+                 </code></pre>
+                <h5>SCSS</h5>
+                    <pre><code class="lang-scss">
+.filter{
+    height: 120px;
+    width: 80px;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:hover .filter__content__icon {
+            color: $baseColor;
+        }
+
+        &:hover .filter__content__icon__food {
+            background-color: $primaryColor;
+        }
+
+        &__icon{
+            color: $primaryColor;
+
+            &__food{
+                fill: currentColor;
+                height: 90px;
+                width: 90px;
+                background-color: $baseColor;
+                border-radius: 50%;
+                padding: 15px;
+            }
+        }
+        &__text{
+            margin: 0;
+            font-size: $font-size-medium;
+        }
+    }
+}
+                </code></pre>
             </section>
         </section>
         <section class="major-section">
