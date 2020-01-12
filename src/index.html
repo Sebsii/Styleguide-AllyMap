@@ -169,18 +169,21 @@
                      </code></pre>
                     <h5>SCSS</h5>
                     <pre><code class="lang-scss">
-.btn{
+&__btn{
     color: $baseColor;
     background-color: $primaryColor;
     border: none;
     outline: none;
+    cursor: pointer;
     padding: 14px 22px; 
     border-radius: 50px;
     transition: 0.4s;
+    height: $height;
+    font-size: $font-size-big;
 
     &:hover{
-        background-color: $primaryColorLight;
-        transition: 0.4s;
+    background-color: $primaryColorLight;
+    transition: 0.4s;
     }
 } 
                     </code></pre>
@@ -200,7 +203,7 @@
                                         </code></pre>
                     <h5>SCSS</h5>
                     <pre><code class="lang-scss">
-.btn-back{
+&__btn-back{
     color: $baseColor;
     background-color: $primaryColor;
     border: none;
@@ -209,6 +212,8 @@
     cursor: pointer;
     border-radius: 50%;
     transition: 0.4s;
+    height: $height;
+    width: $height;
 
     &:hover{
         background-color: $primaryColorLight;
@@ -217,7 +222,7 @@
 
     &__icon{
         height: 30px; 
-    }
+    } 
 }
                     </code></pre>
                 </div>
@@ -239,12 +244,14 @@
                  </code></pre>
                 <h5>SCSS</h5>
                 <pre><code class="lang-scss">
-.search-field{
+&__search-field{
     border: 2px solid $grey;
     padding: 10px 20px;
     border-radius: 50px;
     outline: none;
     max-width: 100%;
+    height: $height;
+    font-size: $font-size-big;
 
     &:focus{
         border: 2px solid $primaryColor;
