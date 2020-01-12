@@ -212,7 +212,41 @@
                 <h3>Headings</h3>
             </section>
             <section class="minor-section">
-                <h3>Lists</h3>
+                <h3>List</h3>
+                <p class="p-flow">
+                    Normal lists are not used in app itself, but on a help site.
+                </p>
+                <ul class="list p-flow">
+                    <li class="list__item">Item no 1</li>
+                    <li class="list__item">Item no 2</li>
+                    <li class="list__item">Item no 3</li>
+                </ul>
+                <h5>HTML</h5>
+                <pre><code class="lang-html">
+&lt;ul class=&quot;list&quot;&gt;
+    &lt;li class=&quot;list__item&quot;&gt;Item no 1&lt;/li&gt;
+    &lt;li class=&quot;list__item&quot;&gt;Item no 2&lt;/li&gt;
+    &lt;li class=&quot;list__item&quot;&gt;Item no 3&lt;/li&gt;
+&lt;/ul&gt;
+                </code></pre>
+                <h5>SCSS</h5>
+                <pre><code class="lang-scss">
+.list {
+    list-style-type: none;
+
+    &__item {
+        line-height: 1.5rem;
+        
+        &::before {
+            content: "\2022";
+            color: $primaryColor;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    }
+}
+                </code></pre>
             </section>
             <section class="minor-section">
                 <h3>Links</h3>
