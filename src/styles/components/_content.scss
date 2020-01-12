@@ -76,6 +76,15 @@
     }
 }
 
+.logo {
+    width: 100%;
+    padding: 5%;
+
+    &--light {
+        background-color: $primaryColor;
+    }
+}
+
 .img-layout {
     max-width: 100%;
 }
