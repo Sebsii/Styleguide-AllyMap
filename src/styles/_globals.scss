@@ -1,62 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: $baseColor;
+	font-family: "Poppins", sans-serif;
+	background-color: $baseColor;
 }
 
-h1, h2, h3, h4, h5 {
-    color: $primaryColor;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: $primaryColor;
 }
 
 h1 {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 h2 {
-    font-size: 3.375rem;
+	font-size: 3.375rem;
 }
 
 h3 {
-    font-size: 2.25rem;
-    margin-left: 1rem;
+	font-size: 2.25rem;
+	margin-left: 1rem;
 }
 
 h4 {
-    font-size: 1.5rem;
-    margin-left: 2rem;
+	font-size: 1.5rem;
+	margin-left: 2rem;
 }
 
 h5 {
-    font-size: 1.2rem;
-    margin-left: 2rem;
+	font-size: 1.2rem;
+	margin-left: 2rem;
+}
+
+@media only screen and (max-width: $widthPhone) {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 2.25rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		margin-left: 0;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		margin-left: 0;
+	}
+
+	h5 {
+		font-size: 1rem;
+		margin-left: 0;
+	}
 }
 
 p {
-    line-height: 1.5rem;
+	line-height: 1.5rem;
 }
 
 .p-flow {
-    margin-left: 2rem;
+	margin-left: 2rem;
 
-    @media only screen and (max-width: $widthPhone) {
-        margin-left: 0.5rem;
-    }
+	@media only screen and (max-width: $widthPhone) {
+		margin-left: 0;
+	}
 }
 
 .max-width-container {
-    @include max-width-container
+	@include max-width-container;
 }
 
 .minor-section {
-    margin-left: 1rem;
+	margin-left: 1rem;
+
+	@media only screen and (max-width: $widthPhone) {
+		margin-left: 0;
+	}
 }
