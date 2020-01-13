@@ -2,11 +2,11 @@
 @import "normalize";
 @import "mixins";
 @import "globals";
-@import "components/header";
-@import "components/content";
-@import "components/burger";
+@import "page-components/burger";
+@import "page-components/header";
+@import "page-components/content";
+@import "page-components/footer";
 @import 'components/button';
-@import 'components/footer';
 @import 'components/form';
 @import 'components/link';
 @import 'components/list';
