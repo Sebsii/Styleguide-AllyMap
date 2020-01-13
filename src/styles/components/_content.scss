@@ -15,19 +15,19 @@
     }
     
     &--green {
-        background-color: #66AD3A;
+        background-color: $green;
     }
 
     &--yellow {
-        background-color: #D4A429;
+        background-color: $yellow;
     }
 
     &--red {
-        background-color: #B92C2C;
+        background-color: $red;
     }
 
     &--grey {
-        background-color: #888888;
+        background-color: $grey;
     }
 
     &--primary {
@@ -53,7 +53,6 @@
 }
 
 .font {
-    margin-left: 3rem;
     border: 1px solid black;
     border-radius: 30px;
 
