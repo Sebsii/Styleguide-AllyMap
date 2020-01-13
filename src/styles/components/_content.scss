@@ -2,14 +2,6 @@
     margin-top: $heightNavBar; // necessary because of otherwise top of <main> would be under the navbar
 }
 
-.p-flow {
-    // margin-left: 3rem;
-
-    @media only screen and (max-width: $widthPhone) {
-        margin-left: 0;
-    }
-}
-
 .color {
     display: flex;
     justify-content: space-evenly;

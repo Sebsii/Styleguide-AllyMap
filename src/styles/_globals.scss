@@ -41,13 +41,22 @@ h5 {
     margin-left: 2rem;
 }
 
-
-
 p {
     line-height: 1.5rem;
+}
+
+.p-flow {
+    margin-left: 2rem;
+
+    @media only screen and (max-width: $widthPhone) {
+        margin-left: 0.5rem;
+    }
 }
 
 .max-width-container {
     @include max-width-container
 }
 
+.minor-section {
+    margin-left: 1rem;
+}
